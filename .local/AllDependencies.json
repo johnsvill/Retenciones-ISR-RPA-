@@ -1301,9 +1301,9 @@
     "restore": {
       "projectUniqueName": "RetensiónISRFacturas",
       "projectName": "RetensiónISRFacturas",
-      "projectPath": "C:\\Users\\BDGSA\\Documents\\UiPath\\RetenciónISRFacturas\\.local",
+      "projectPath": "C:\\Users\\BDGSA\\Documents\\UiPath\\RetensiónISRFacturas\\.local",
       "packagesPath": "C:\\Users\\BDGSA\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\BDGSA\\Documents\\UiPath\\RetenciónISRFacturas\\.local"
+      "outputPath": "C:\\Users\\BDGSA\\Documents\\UiPath\\RetensiónISRFacturas\\.local"
     },
     "frameworks": {
       "net461": {
