@@ -34,7 +34,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="17">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="34">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -52,6 +52,7 @@
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
       <AssemblyReference>System.ValueTuple</AssemblyReference>
       <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Flowchart sap:VirtualizedContainerService.HintSize="634,815" sap2010:WorkflowViewState.IdRef="Flowchart_1">
@@ -116,7 +117,7 @@
               <av:Size x:Key="ShapeSize">200,93</av:Size>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:ForEachRow CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Iterar la lista de facturas para la retención" DataTable="[ListaFacturas]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="764,1609" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+          <ui:ForEachRow CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Iterar la lista de facturas para la retención" DataTable="[ListaFacturas]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="200,93" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
             <ui:ForEachRow.Body>
               <ActivityAction x:TypeArguments="sd:DataRow">
                 <ActivityAction.Argument>
@@ -229,7 +230,7 @@
                                   </Assign.Value>
                                 </Assign>
                                 <ui:PathExists DisplayName="Path Exists" Exists="[PathAlreadyExists]" sap:VirtualizedContainerService.HintSize="334,89" sap2010:WorkflowViewState.IdRef="PathExists_1" Path="[nombreArchivo]" PathType="File" />
-                                <If sap2010:Annotation.AnnotationText="Se crea el archivo" Condition="[PathAlreadyExists]" sap:VirtualizedContainerService.HintSize="334,78" sap2010:WorkflowViewState.IdRef="If_2">
+                                <If sap2010:Annotation.AnnotationText="Se crea el archivo" Condition="[PathAlreadyExists]" sap:VirtualizedContainerService.HintSize="484,254" sap2010:WorkflowViewState.IdRef="If_2">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -526,7 +527,7 @@
                                                   <av:PointCollection x:Key="ConnectorLocation">300,853 300,884.02</av:PointCollection>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
-                                              <Sequence DisplayName="Guardar Documento" sap:VirtualizedContainerService.HintSize="476,1240" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                                              <Sequence DisplayName="Guardar Documento" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_22">
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -861,7 +862,7 @@
                                             </ui:UiElementExists>
                                           </Sequence>
                                         </DoWhile>
-                                        <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" sap:VirtualizedContainerService.HintSize="484,68" sap2010:WorkflowViewState.IdRef="Click_37" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                        <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" sap:VirtualizedContainerService.HintSize="484,68" sap2010:WorkflowViewState.IdRef="Click_40" KeyModifiers="None" MouseButton="BTN_LEFT">
                                           <ui:Click.CursorPosition>
                                             <ui:CursorPosition Position="Center">
                                               <ui:CursorPosition.OffsetX>
@@ -873,7 +874,7 @@
                                             </ui:CursorPosition>
                                           </ui:Click.CursorPosition>
                                           <ui:Click.Target>
-                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="[&quot;&lt;wnd app='retenisr2.exe' cls='ApolloRuntimeContentWindow' title='RetenISR2 Versión 1.6.5' /&gt;&lt;ctrl name='&quot;&amp; Nit.ToString &amp;&quot;' role='text' /&gt;&quot;]">
+                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="[&quot;&lt;wnd app='retenisr2.exe' cls='ApolloRuntimeContentWindow' title='RetenISR2 Versión 1.6.5' /&gt;&lt;ctrl name='&quot;&amp; Factura(&quot;Empresa&quot;).ToString &amp;&quot;' role='text' /&gt;&quot;]">
                                               <ui:Target.TimeoutMS>
                                                 <InArgument x:TypeArguments="x:Int32" />
                                               </ui:Target.TimeoutMS>
